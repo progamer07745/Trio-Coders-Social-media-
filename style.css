@@ -1,0 +1,133 @@
+/* Initialization */
+:root {
+    --bg-dark: #1e1e1e; 
+    --text-light: #d4d4d4; 
+    --link-color: #569cd6; 
+    --highlight-green: #4ec9b0; 
+    --icon-size: 2.5em; /* تحديد حجم الأيقونة */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Source Code Pro', monospace; 
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--highlight-green);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--highlight-green);
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 1.1em;
+    color: var(--link-color);
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #252526;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    direction: rtl;
+}
+
+.link-button {
+    text-decoration: none;
+    color: var(--text-light);
+    background-color: #333333; 
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--highlight-green);
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex; /* 💡 استخدام فليكس بوكس لترتيب الأيقونة والنص */
+    align-items: center; /* لمحاذاة العناصر عمودياً */
+    justify-content: flex-start; /* الأيقونة والنص يبدآن من اليمين */
+}
+
+.link-button span {
+    width: 100%;
+    text-align: center; 
+}
+
+/* 💡 تنسيق الأيقونة */
+.link-button i {
+    font-size: var(--icon-size);
+    color: var(--highlight-green); 
+    width: 60px;
+    text-align: center;
+}
+/*  */
+
+/* تأثير التحويم (Hover Effect) كما كان */
+.link-button:hover {
+    background-color: var(--highlight-green);
+    color: var(--bg-dark); 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(78, 201, 176, 0.4);
+}
+
+/* 💡 عند التحويم، غيّر لون الأيقونة ليناسب الخلفية */
+.link-button:hover i {
+    color: var(--bg-dark); 
+}
+
+.link-button.coming-soon:hover {
+    background-color: #333333; /* الخلفية تعود للون الزر العادي */
+    color: var(--text-light); /* النص يعود للونه العادي */
+    transform: none; /* إلغاء الحركة للأعلى */
+    box-shadow: none; /* إلغاء ظل النيون */
+    cursor: default; /* تغيير شكل المؤشر ليدل على أنه غير قابل للضغط */
+}
+/* ألوان مميزة لكل زر (اختياري) */
+.link-button.youtube { border-color: #ff0000; }
+.link-button.youtube i { color: #ff0000; }
+
+.link-button.github { border-color: #6e5494; }
+.link-button.github i { color: #6e5494; }
+
+.link-button.facebook { border-color: #1877f2; }
+.link-button.facebook i { color: #1877f2; }
+
+.link-button.twitter { border-color: #0a66c2; }
+.link-button.twitter i { color: #0a66c2; }
+
+.link-button.coming-soon { border-color: #6a6a6a; } 
+.link-button.coming-soon i { color: #6a6a6a;}
+
+
+
+.footer-note {
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: #6a6a6a;
+}
